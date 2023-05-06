@@ -207,7 +207,7 @@ const semesters = [
   },
   {
     id: 'pg4',
-    name: 'Post Graduation Semester 4',
+    name: 'Masters Semester 4',
     days: [
       {
         id: 1,
