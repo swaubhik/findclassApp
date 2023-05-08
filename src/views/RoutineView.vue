@@ -186,8 +186,6 @@ export default {
       var day = semester.days.find((day) => {
         return day.id === dayValue
       })
-
-      console.log(day)
       this.showClass = day.classes
     }
   }
