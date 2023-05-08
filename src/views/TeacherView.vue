@@ -79,25 +79,28 @@ export default {
       days,
       activeItem: null,
       showClass: [],
-      teacher: null
+      teacher: this.$route.params.code
     }
   },
   created() {
     this.title = this.$route.params.sem
-    this.teacher = this.$route.params.code
   },
   methods: {
-    // find all the classes from the semester for teacher code
+    // find all the classes from the semester for teacher code and day
     findClassesT(day) {
       this.activeItem = day
-      const days = this.semesters.find((semester) => semester.name === this.title).days
-      const classes = days.find((d) => d.id === day).classes
-      classes.forEach((c) => {
-        if (c.teacher === this.teacher) {
-          // push the class only once
-          if (!this.showClass.includes(c)) {
-            this.showClass.push(c)
-          }
+      this.showClass = []
+      this.semesters.forEach((sem) => {
+        if (sem.name === this.title) {
+          sem.days.forEach((d) => {
+            if (d.id === day) {
+              d.classes.forEach((c) => {
+                if (c.teacher === this.teacher) {
+                  this.showClass.push(c)
+                }
+              })
+            }
+          })
         }
       })
     }
