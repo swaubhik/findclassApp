@@ -5,8 +5,16 @@
       class="bg-blue-400 hover:bg-blue-500 text-gray-800 font-bold py-2 px-4 rounded flex w-64 items-center text-center justify-between"
     >
       <span>{{ selected }}</span>
-      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path d="M6 8l4 4 4-4" :class="{ 'rotate-180': isOpen }"></path>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        :class="{ 'rotate-90': isOpen }"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
       </svg>
     </button>
 
@@ -20,7 +28,8 @@
         @click="selectOption(option)"
         class="w-full text-center px-4 py-2 text-gray-800 hover:bg-gray-200 border-b"
       >
-        {{ option.name }}
+        <slot />
+        
       </button>
     </div>
   </div>
