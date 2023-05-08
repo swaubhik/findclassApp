@@ -31,17 +31,17 @@ const faculties = [
   {
     id: 2,
     code: 'SDN',
-    name: 'Sarnadeep Nandy'
+    name: 'Swarnadeep Nath'
   },
   {
     id: 3,
     code: 'JDHB',
-    name: 'Jyoti Das Hira Barua'
+    name: 'Susmita Roy'
   },
   {
     id: 4,
     code: 'DKB',
-    name: 'Debashish Kumar Baruah'
+    name: 'Debarshi Kr. Brahma'
   }
 ]
 const semesters = [
