@@ -1,11 +1,12 @@
 <template>
-  <header class="shadow py-2 px-4">
-    <h1>Find Class</h1>
+  <header class="shadow py-2 px-4 flex items-center">
+    <img class="w-1/4" src="../../public/bg-logo.png" alt="logo" />
+    <h1 class="text-3xl font-bold">Find Class</h1>
   </header>
   <main>
-    <div class="flex p-4 items-center flex-col justify-between h-full">
+    <div class="flex relative p-4 items-center flex-col gap-20 justify-between h-full">
       <AppSearch />
-      <AppDropdown :options="semesters" selectedValue="Select Semester" />
+      <AppDropdown class="shadow-lg" :options="semesters" selectedValue="Select Semester" />
       <multilevel-dropdown :options="faculties" @selected="onOptionSelected" :keep-open="true" />
     </div>
   </main>
