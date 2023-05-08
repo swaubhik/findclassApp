@@ -1,22 +1,39 @@
 <template>
-  <div class="">
+  <div class="relative">
     <button
-      class="bg-blue-400 w-full py-2 px-4 hover:blue-500 font-semibold"
+      class="text-gray-800 font-bold py-2 rounded inline-flex justify-between"
       @click="isOpen = !isOpen"
+      :class="place == '' ? 'w-28' : 'bg-blue-400 w-64 hover:bg-blue-500 px-4'"
     >
-      {{ place }}
+      <span>{{ place }}</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+        :class="{ 'rotate-90': isOpen }"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
     </button>
-    <ul v-if="isOpen" class="dropdown-menu">
-      <li v-for="option in options" :key="option.value" @click="selectOption(option)">
+    <ul v-if="isOpen" class="absolute z-50 bg-white py-2 shadow-lg rounded mt-1">
+      <li
+        class="flex justify-between items-center text-center px-4 py-2 text-gray-800 hover:bg-gray-200 border-b"
+        v-for="option in options"
+        :key="option.value"
+        @click="selectOption(option)"
+      >
         <span v-if="option.name">{{ option.name }}</span>
         <span v-else>{{ option }}</span>
         <multilevel-dropdown
-          class="ml-2 w-full text-center px-4 py-2 text-gray-800 hover:bg-gray-200 border-b"
+          class="ml-2 w-full text-center px-4 py-2 text-gray-800"
           v-if="option.semesters"
           :options="option.semesters"
           @selected="onOptionSelected"
           :keep-open="true"
-          place=">"
+          place=""
         ></multilevel-dropdown>
       </li>
     </ul>
