@@ -22,6 +22,28 @@ const days = [
     day: 'Fri'
   }
 ]
+const faculties = [
+  {
+    id: 1,
+    code: 'ABP',
+    name: 'Abhijit Padun'
+  },
+  {
+    id: 2,
+    code: 'SDN',
+    name: 'Sarnadeep Nandy'
+  },
+  {
+    id: 3,
+    code: 'JDHB',
+    name: 'Jyoti Das Hira Barua'
+  },
+  {
+    id: 4,
+    code: 'DKB',
+    name: 'Debashish Kumar Baruah'
+  }
+]
 const semesters = [
   {
     id: 'ug2',
@@ -245,4 +267,4 @@ const semesters = [
   }
 ]
 
-export { days, semesters }
+export { days, semesters, faculties }
