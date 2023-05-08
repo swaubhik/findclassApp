@@ -28,8 +28,7 @@
         @click="selectOption(option)"
         class="w-full text-center px-4 py-2 text-gray-800 hover:bg-gray-200 border-b"
       >
-        <slot />
-        
+        {{ option.name }}
       </button>
     </div>
   </div>
@@ -64,7 +63,3 @@ export default {
   }
 }
 </script>
-
-<style>
-/* No styles needed for this component */
-</style>
