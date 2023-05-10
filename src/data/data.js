@@ -57,19 +57,22 @@ const semesters = [
             id: 1,
             time: '8:30 AM - 9:30 AM',
             subject: 'UMCD 204',
-            teacher: 'ABP'
+            teacher: 'ABP',
+            room: 'Lab 1'
           },
           {
             id: 2,
             time: '10:30 AM - 11:30 AM',
             subject: 'UMCD 201',
-            teacher: 'SDN'
+            teacher: 'SDN',
+            room: 'Lab 2'
           },
           {
             id: 3,
             time: '11:30 AM - 12:30 PM',
             subject: 'UHSS 201 Lab',
-            teacher: 'JDHB'
+            teacher: 'JDHB',
+            room:'Lab 1'
           },
           {
             id: 4,
@@ -85,19 +88,22 @@ const semesters = [
             id: 1,
             time: '9:30 AM - 10:30 AM',
             subject: 'UMCD 201',
-            teacher: 'SDN'
+            teacher: 'SDN',
+            room: 'Lab 1'
           },
           {
             id: 2,
             time: '10:30 AM - 11:30 AM',
             subject: 'UMCD 202',
-            teacher: 'DKB'
+            teacher: 'DKB',
+            room: 'Lab 2'
           },
           {
             id: 3,
             time: '11:30 AM - 12:30 PM',
             subject: 'UHSS 201 Lab',
-            teacher: 'JDHB'
+            teacher: 'JDHB',
+            room: 'Seminar Hall'
           },
           {
             id: 4,
@@ -119,19 +125,22 @@ const semesters = [
             id: 1,
             time: '8:30 AM - 9:30 AM',
             subject: 'UMCD 204',
-            teacher: 'ABP'
+            teacher: 'ABP',
+            room: 'Lab 2'
           },
           {
             id: 2,
             time: '10:30 AM - 11:30 AM',
             subject: 'UMCD 201',
-            teacher: 'SDN'
+            teacher: 'SDN',
+            room: 'Lab 1'
           },
           {
             id: 3,
             time: '11:30 AM - 12:30 PM',
             subject: 'UHSS 201 Lab',
-            teacher: 'JDHB'
+            teacher: 'JDHB',
+            room: 'Seminar Hall'
           },
           {
             id: 4,
@@ -147,19 +156,22 @@ const semesters = [
             id: 1,
             time: '9:30 AM - 10:30 AM',
             subject: 'UMCD 201',
-            teacher: 'SDN'
+            teacher: 'SDN',
+            room: 'Lab 1'
           },
           {
             id: 2,
             time: '10:30 AM - 11:30 AM',
             subject: 'UMCD 202',
-            teacher: 'DKB'
+            teacher: 'DKB',
+            room: 'Lab 2'
           },
           {
             id: 3,
             time: '11:30 AM - 12:30 PM',
             subject: 'UHSS 201 Lab',
-            teacher: 'JDHB'
+            teacher: 'JDHB',
+            room: 'Seminar Hall'
           },
           {
             id: 4,
@@ -189,7 +201,8 @@ const semesters = [
             id: 1,
             time: '8:30 AM - 12:30 PM',
             subject: 'PMCD 211',
-            teacher: 'SDN'
+            teacher: 'SDN',
+            room: 'Seminar Hall'
           },
           {
             id: 2,
@@ -199,7 +212,8 @@ const semesters = [
             id: 3,
             time: '1:30 PM - 3:30 PM',
             subject: 'PMCD 212',
-            teacher: 'SMR'
+            teacher: 'SMR',
+            room: 'Workshop'
           }
         ]
       },
@@ -211,7 +225,8 @@ const semesters = [
             id: 1,
             time: '10:30 AM - 12:30 PM',
             subject: 'PMCD 212 Lab',
-            teacher: 'SMR'
+            teacher: 'SMR',
+            room: 'Workshop'
           },
           {
             id: 2,
@@ -221,7 +236,8 @@ const semesters = [
             id: 3,
             time: '1:30 PM - 3:30 PM',
             subject: 'PMCD 211 Lab',
-            teacher: 'SDN'
+            teacher: 'SDN',
+            room: 'Seminar Hall'
           }
         ]
       }
@@ -239,7 +255,8 @@ const semesters = [
             id: 1,
             time: '9:30 AM - 11:30 AM',
             subject: 'PMCD 471',
-            teacher: 'ALL'
+            teacher: 'ALL',
+            room: 'Seminar Hall'
           },
           {
             id: 2,
@@ -255,7 +272,8 @@ const semesters = [
             id: 1,
             time: '9:30 AM - 11:30 AM',
             subject: 'PMCD 471',
-            teacher: 'ALL'
+            teacher: 'ALL',
+            room: 'Seminar Hall'
           },
           {
             id: 2,
