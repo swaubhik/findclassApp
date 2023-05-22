@@ -54,7 +54,7 @@ export default {
     },
     place: {
       type: String,
-      default: 'Select Pofessor'
+      default: 'Select'
     }
   },
   data() {

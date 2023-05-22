@@ -56,9 +56,16 @@ export default {
   methods: {
     selectOption(option) {
       this.selected = option.name
+      // chack if option.name contains 'semester'
+      let optionLower = option.name.toLowerCase()
+      if (optionLower.includes('semester')) {
+        // if true, then push to router
+        this.$router.push({ name: 'routine', params: { id: option.id } })
+      } else {
+        // if false, then push to router
+        this.$router.push({ name: 'room', params: { id: option.id } })
+      }
       this.isOpen = false
-      //   push to router
-      this.$router.push({ name: 'routine', params: { id: option.id } })
     }
   }
 }

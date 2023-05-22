@@ -7,7 +7,13 @@
     <div class="flex relative p-4 items-center flex-col gap-20 justify-between h-full">
       <AppSearch />
       <AppDropdown class="shadow-lg" :options="semesters" selectedValue="Select Semester" />
-      <multilevel-dropdown :options="faculties" @selected="onOptionSelected" :keep-open="true" />
+      <multilevel-dropdown
+        :options="faculties"
+        place="Select Professor"
+        @selected="onOptionSelected"
+        :keep-open="true"
+      />
+      <AppDropdown class="shadow-lg" :options="rooms" selectedValue="Select Room" />
     </div>
   </main>
 </template>
@@ -15,7 +21,7 @@
 <script>
 import AppSearch from '@/components/AppSearch.vue'
 import AppDropdown from '../components/AppDropdown.vue'
-import { semesters, faculties } from '../data/data'
+import { semesters, faculties, rooms } from '../data/data'
 import MultilevelDropdown from '../components/MultilevelDropdown.vue'
 export default {
   name: 'HomeView',
@@ -38,7 +44,8 @@ export default {
             }
           })
         }
-      })
+      }),
+      rooms
     }
   },
   methods: {
