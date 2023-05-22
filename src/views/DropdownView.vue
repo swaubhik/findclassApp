@@ -70,7 +70,6 @@
   </div>
 </template>
 <script>
-import { semesters } from '../data/data.js'
 export default {
   name: 'RoomView',
   data() {
@@ -373,7 +372,19 @@ export default {
       })
       let roomname = room.name
       // find classes on room by day
-      
+      this.semesters.forEach((semester) => {
+        if (semester.days) {
+          semester.days.forEach((day) => {
+            if (day.id === dayValue) {
+              day.classes.forEach((classItem) => {
+                if (classItem.room == roomname) {
+                  this.showClass.push(classItem)
+                }
+              })
+            }
+          })
+        }
+      })
     }
   }
 }

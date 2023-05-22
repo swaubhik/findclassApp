@@ -1,6 +1,6 @@
 <template>
   <header class="shadow py-2 px-4 flex items-center">
-    <img class="w-1/4" src="../../public/bg-logo.png" alt="logo" />
+    <img class="w-1/4" src="@/assets/icon.png" alt="logo" />
     <h1 class="text-3xl font-bold">Find Class</h1>
   </header>
   <main>

@@ -179,20 +179,25 @@ export default {
   methods: {
     findClassesR(dayValue) {
       this.activeItem = dayValue
-      let id = 1
+      let id = this.$route.params.id
       let room = this.rooms.find((room) => {
         return room.id == id
       })
-      let roomname = room.name
-      console.log(roomname)
       this.showClass = []
-      //   find all the classes inside semester with roomname
+      let roomname = room.name
+      // find classes on room by day
       this.semesters.forEach((semester) => {
-        semester.days.forEach((day) => {
-          if (day.id === dayValue) {
-            
-          }
-        })
+        if (semester.days) {
+          semester.days.forEach((day) => {
+            if (day.id === dayValue) {
+              day.classes.forEach((classItem) => {
+                if (classItem.room == roomname) {
+                  this.showClass.push(classItem)
+                }
+              })
+            }
+          })
+        }
       })
     }
   }
