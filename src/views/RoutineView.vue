@@ -50,6 +50,9 @@
         <div class="flex flex-col items-center p-2 w-full">
           <div
             v-if="!i.isBreak"
+            :style="{
+              background: i.color
+            }"
             class="flex flex-col w-full p-1 border-2 border-gray-500 rounded-lg"
           >
             <div class="font-semibold">
@@ -153,7 +156,7 @@
   </div>
 </template>
 <script>
-import { semesters, days } from '../data/data.js'
+import { semesters, days, faculties } from '../data/data.js'
 export default {
   name: 'RoutineView',
   data() {
@@ -161,6 +164,7 @@ export default {
       title: null,
       semesters,
       days,
+      faculties,
       activeItem: null,
       showClass: []
     }
@@ -186,7 +190,16 @@ export default {
       var day = semester.days.find((day) => {
         return day.id === dayValue
       })
-      this.showClass = day.classes
+      const classes = day.classes.map((c) => {
+        faculties.find((f) => {
+          if (f.code === c.teacher) {
+            c.color = f.color
+          }
+        })
+        return c
+      })
+      this.showClass = classes
+      console.log(this.showClass)
     }
   }
 }

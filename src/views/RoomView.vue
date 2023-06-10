@@ -50,6 +50,9 @@
         <div class="flex flex-col items-center p-2 w-full">
           <div
             v-if="!i.isBreak"
+            :style="{
+              background: i.color
+            }"
             class="flex flex-col w-full p-1 border-2 border-gray-500 rounded-lg"
           >
             <div class="font-semibold">
@@ -153,7 +156,7 @@
   </div>
 </template>
 <script>
-import { semesters, days, rooms } from '../data/data.js'
+import { semesters, days, rooms, faculties } from '../data/data.js'
 export default {
   name: 'RoomView',
   data() {
@@ -162,6 +165,7 @@ export default {
       days,
       rooms,
       semesters,
+      faculties,
       activeItem: null,
       showClass: []
     }
@@ -192,7 +196,14 @@ export default {
             if (day.id === dayValue) {
               day.classes.forEach((classItem) => {
                 if (classItem.room == roomname) {
-                  this.showClass.push(classItem)
+                  faculties.find((faculty) => {
+                    if (faculty.code === classItem.teacher) {
+                      console.log(faculty.color)
+                      classItem.color = faculty.color
+                      console.log(classItem)
+                      this.showClass.push(classItem)
+                    }
+                  })
                 }
               })
             }
